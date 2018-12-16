@@ -1,5 +1,8 @@
 package com.travelhelper.model;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Place {
     private int id;
     private String name;
