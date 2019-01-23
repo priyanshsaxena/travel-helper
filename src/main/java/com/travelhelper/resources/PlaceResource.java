@@ -19,7 +19,7 @@ public class PlaceResource {
 
     @GET
     @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
-    public List<Place> getAllEmployees() {
+    public List<Place> getAllPlaces() {
         return placeDataRepository.getAllPlaces();
     }
 
@@ -41,7 +41,7 @@ public class PlaceResource {
     @DELETE
     @Path("/{name}")
     @Consumes({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
-    public Response deleteEmployee(@PathParam("name") String name) {
+    public Response deletePlace(@PathParam("name") String name) {
         placeDataRepository.deletePlace(name);
         return Response.status(Response.Status.OK.getStatusCode()).build();
     }
